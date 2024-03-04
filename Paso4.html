@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Carlos Ramos Puerto" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="Style.css">
+    <title>Paso 4: Pasar archivo entre SO</title>
+     <!--Creado por Carlos Ramos Puerto. Cuarta y ultima pagina explicando como conseguir la IP para poder pasar datos entre Sistemas Operativos-->
+</head>
+<body>
+    <main>
+        <section class="flex-container">
+            <h1>HOW TO Virtualizacion y uso de Samba. </h1>
+            <br>
+            <div>
+                <iframe src="Menu.html" frameborder="0" scrolling="no" width="500px" height="250px"></iframe>
+            </div>
+            <div>
+                <h1>Paso 4:Saber la Ip y pasar archivo entre SO</h1>
+                <p>Ahora ya con la carpeta creada y con permisos creadas en Linux, el siguiente paso será saber la Ip de la maquina para poder enviar archivos. Con el comando <b>"ip a"</b> o <b>"ipconfig"</b> se nos mostrará la ocnfiguración base de nuestra máquina.</p>
+                <img src="Imagenes/UbuntuIP.png">
+                <p>Despues abrimos la maquina de Windows y para poder compartir datos, tenemos que configurar algunos permisos predeterminados</p>
+                <p>Entre ello vamos a configurar el firewall y habilitar las regals de <b>"Archivos e impresoras de uso compartidos"</b></p>
+                <p>Vamos paso a paso, lo primero será hacer click en el boton de Inicio (abajo a la izquierda con el icono de Windows) y en la ventana buscar escribimos <b>"Firewall"</b> y le damos click <b>"Firewall de Windows Defender"</b></p>
+                <img src="Imagenes/WindowsFirewall.png">
+                <p>Se abrirá una ventana, en ella buscamos el apartado <b>"Configuración avanzada"</b>, le damos un click y s abrira otra pestaña</p>
+                <img src="Imagenes/WindowsConfiguracionAvanzada.png">
+                <p>Hacemos click en <b>"Reglas de entrada"</b> y buscamos los archivos <b>"Archivos e impresoras compartidos"</b>, deberia haber mas de uno con el mismo nombre y todos tiene que estar aceptado(Icono Correcto a la izquierda), debe aparecer como la foto.</p>
+                <img src="Imagenes/WindowsFirewalImpresoras.png">
+                <p>Ya con el Firewall bien administrado, cerramos las pestaña y volvemos darle click al boton de Inicio y esta vez escribimos <b>"Uso compartido"</b> y le damos click en <b>"Administrar configuracion avanzada de uso compartido"</b></p>
+                <img src="Imagenes/WindowsUsoCompartido.png">
+                <p>En la pestaña que se ha abierto le damos un click en el boton de <b>"Activar detección de redes"</b> y tambien en <b>"Activar el uso compartido de archivos e impresoras"</b></p>
+                <img src="Imagenes/WindowsUsoAvanzado.png">
+                <p>El ultimo paso volvemos a dar click al boton de inicio y escribimos <b>"Ejecutar"</b>, se abrira una pequeña pestaña</p>
+                <img src="Imagenes/WindowsEjecutar.png">
+                <p>Escribimos la Direcion IP de Linux y se abrirá la carpeta que se ha creado en la maquina Linux, añadimos las credenciales que nos pida y podremos compartir datos desde distintas máquinas.</p>
+                <img src="Imagenes/WindowsCarpetaCompartida.png">
+            </div>
+        </section>
+        <section class="iconos">
+            <div class="iconos1">
+                <a href="HOW-TO INDEX.html"><img src="Imagenes/House.png" width="50px"></a>
+            </div>
+            <div class="iconos2">
+                <a href="Paso1.html"><img src="Imagenes/FlechaArriba.png" width="50px"></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="contains">
+
+            <div class="footer-row">
+
+                <div class="footer-links">  
+                    <h4>Compañia</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros Servivicios</a></li>
+                        <li><a href="#">Politica de privacidad</a></li>
+                        <li><a href="#">Afiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Estatus de orden</a></li>
+                        <li><a href="#">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Ropa</a></li>
+                        <li><a href="#">Zapatos</a></li>
+                        <li><a href="#">Telefonos</a></li>
+                        <li><a href="#">Pantallas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

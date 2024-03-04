@@ -1,0 +1,197 @@
+/*Modificacion general*/
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(145, 162, 219);
+    border-radius: auto;
+    text-align: center;
+}
+/*Modificacion en titulos*/
+h1{
+    font-size: 33px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #24203e;;
+    
+
+} 
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: 25% 50% 25% ;
+    grid-template-rows: 85% 10%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-text-stroke: 0.8px #000000;
+    text-decoration: none;
+    color: #45305c;
+    font-size: 25px;
+    
+}
+/*Fotos Index Izquierda*/
+.fotosizq{
+    margin-top: 500px;
+    width: 300px;
+}
+/*Fotos Index Derecha*/
+.fotosder{
+    width: 200px;
+    margin-top: 600px;
+}
+
+.flex-container{
+    flex-flow: row wrap;
+}
+/*Parrafos generales*/
+p{
+    color: #601331;
+    font-size: 22px;
+    font-family:Arial, Helvetica, sans-serif;   
+}
+/*Palabras en negrita*/
+b{
+    color: #4e1360;
+}
+/*Cambios en el tamaño de las 3 fotos juntas*/
+.fotosPaso1{
+ width: 30%;
+ height: 300px;
+}
+/*Cambios en los icosnos para que se muestren debajo de cada paso para subir arriba, donde esta el menu o volver a la portada a elegir paso*/
+.iconos{
+    display: flex; 
+    justify-content: center;  
+}
+
+.iconos1{
+    margin-right: 25px;
+}
+
+.iconos2{
+    margin-left: 25px;
+}
+/*Modificaciones del pie de pagina*/
+.footer{
+
+    background-color: #24262b;
+    border-radius:auto;
+}
+
+.contains{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-row{
+    display:flex;
+    flex-wrap: 25;
+    justify-content: space-around;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3FF;
+    padding-bottom: 10px;
+    display: inline-block;    
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color:#BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: #ffffff;
+    padding-left: 6px;
+}
+
+.social-links a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+.social-links a:hover{
+    background-color: #00c3FF;
+}
+
+@media(max-width: 991px){
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/*Menu Desplegable*/
+#header {
+    margin:auto;
+    width:500px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+.nav {
+    width:500px;
+    margin:0 auto; 
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#434343;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Carlos Ramos Puerto" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>Paso 3: Instalacion de Samba</title>
+     <!--Creado por Carlos Ramos Puerto. Tercera pagina explicando la instalacion de Samba y VIM en Linux para poder pasar datos a otros Sistemas Operativos-->
+</head>
+<body>
+    <h1>HOW TO Virtualizacion y uso de Samba. </h1>
+    <br>
+    <main>
+        <section class="flex-container">
+            <div>
+                <iframe src="Menu.html" frameborder="0" scrolling="no" width="500px" height="250px"></iframe>
+            </div>
+            <div>
+                <h1>Paso 3: Instalacion de Samba y Vim en Ubuntu/Linux</h1>
+                <br>
+                <p>Despues de comprobar que ambos sistemas estan actualizados y funcionan perfectamente, vamos a proceder  a instalar el programa <b>"Samba"</b> en el Sistema Operativo de Linux/Ubuntu</p>
+                <p>Gracias al programa <b>"Samba"</b> podemos compartir archivos de diferentes Sistemas operativos</p>
+                <br>
+                <p>Iniciamos sesion en la maquina Virtual de Linux/Ubuntu, poniendo los datos creados con anterioridad.</p>
+                <img src="Imagenes/UbuntuUsuario.png" width="800">
+                <p>Una vez dentro abriremos el terminal para escribir por comandos,</p>
+                <p>si por casualidad no hubiera ninguno instalado de forma predeterminada lo descargaremos de la pestaña <b>"Ubuntu Software"</b> (Icono con forma de bolsa de la compra)</p>
+                <p>dentro escribimos <b>"terminal"</b> y descargamos uno de los muchos disponibles</p>
+                <img src="Imagenes/UbuntuTerminal.png">
+                <p>Ya con nuestro terminal descargado, iremos a la pestaña de aplicaciones (abajo a la izquierda con nueve ventanas) y abrimos el terminal</p>
+                <img src="Imagenes/UbuntuAbriendoTerminal.png">
+                <p>Ahora empezaremos a escribir los comandos dentro de la terminal</p>
+                <p>Con el comando su (Cambiamos a la raiz o root) nos pedira la contraseña con la que inciamos sesion.</p>
+                <p>Escribimos <b>"apt upgrade"</b> despues nos pondrá si queremos realizar la upgrade del sistema, le damos a <b>"y"</b> y esperamos que se actualice</p>
+                <img src="Imagenes/UbuntuUpgrade.png">
+                <p>El siguiente paso sera escribir <b>"apt update"</b>, esperamos unos segundos que se actualice</p>
+                <img src="Imagenes/UbuntuUpdate.png">
+                <p>Instalamos <b>"Samba"</b> escribiendo el comando <b>"apt install samba"</b>, aceptamos y  esperamos que se instale</p>
+                <img src="Imagenes/UbuntuSambaIntall.png">
+                <p>El siguiente paso es crear un nuevo usuario para compartir los archivos, para ello usamos el comando <b>"adduser winuser"</b>, escribimos la nueva contraseña del nuevo usuario y añadimos los datos y aceptamos</p>
+                <img src="Imagenes/UbuntuNewUser.png">
+                <p> el siguiente paso es cambiar al nuevo usuario y crear una carpeta con los permisos de poder compartir. Para ellos lo primero usamos el comando <b>"su winuser"</b></p>
+                <p>como estamos en la entra del usuario anterior usamos el comando <b>"cd .."</b> para retroceder en la carpeta, despues escribimos <b>"cd winuser"</b> para entrar en la carpeta del usuario recien creado.</p>
+                <img src="Imagenes/UbuntuCarpetaWinuser.png">
+                <p>Ahora que ya estamos en la carpeta del usuario, vamos a crear una carpeta para ello escribirmos el comando <b>"mkdir compartida"</b>(Compartida sera el nombre de la carpeta.</p> 
+                <p>Si quieres ver la carpeta en el terminal escribe el comando <b>"ls"</b> para que se muestre por pantalla todo el contenido de la carpeta actual)</p>
+                <p>Ya con la carpeta creada, vamos a darle los permisos a la carpeta, usamos el comando <b>"chmod 777 compartida/"</b></p>
+                <img src="Imagenes/UbuntuChmod.png">
+                <p>La razón por que hemos instalado Samba en Linux solo en Ubuntu es por que Windows ya posee un sistema de implementación de archivos con la que puede leer archivos de formato .smb.conf</p>
+                <p>Ahora enseñaré un video explicando el proceso de instalacion de Vim y su configuracion</p>
+                <iframe width="900" height="500" src="https://www.youtube.com/embed/CgWjtKGWBL4?si=wnKkOmYaHWMQz9N5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>El siguiente paso será añadir al usuario <b>"winuser"</b> al <b>"Samba"</b> y ponerle una contraseña, para ello se usa el comando <b>"smbpasswd"</b>, pondremos una nueva contraseña para <b>"Samba"</b> (Podemos optar por poner la contraseñas añadidas anterirormente)</p>
+                <img src="Imagenes/UbuntuSambaPermisos.png">
+                <p>El siguiente paso sera cambiar al usuario <b>"winuser"</b> para crear un archivo dentro de la carpeta que se ha creado con anterioridad.</p>
+                <p>Con el comando <b>"su winuser"</b> cambiamos de usuario, despues usaremos <b>"cd .."</b> para movernos hacia atras y elegimos la ruta con el comando <b>"cd winuser/compartida/"</b>, por ultimo creamos el archivo con el comando <b>"touch archivo-linux"</b></p>
+                <p>Si todo ha salido bien usando el comando <b>"ls"</b> se mostrara en la terminal los archivos dentro de la carpeta actual, deberá aparecer el archivo recien creado.</p>
+                <img src="Imagenes/UbuntuCrearArchivoLinux.png">
+                <p>El proximo paso será reiniciar los servicios de <b>"Samba"</b>, para ello  tenemos que cambiar al admin (comando <b>"su"</b>), volvemos a escribir la contraseña y escribimos el comando <b>"systemctl restart smbd.service"</b></p>
+                <img src="Imagenes/UbuntuSambaReiniciio.png">
+                <br>
+            </div>
+        </section>
+        <section class="iconos">
+            <div class="iconos1">
+                <a href="HOW-TO INDEX.html"><img src="Imagenes/House.png" width="50px"></a>
+            </div>
+            <div class="iconos2">
+                <a href="Paso1.html"><img src="Imagenes/FlechaArriba.png" width="50px"></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="contains">
+
+            <div class="footer-row">
+
+                <div class="footer-links">  
+                    <h4>Compañia</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros Servivicios</a></li>
+                        <li><a href="#">Politica de privacidad</a></li>
+                        <li><a href="#">Afiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Estatus de orden</a></li>
+                        <li><a href="#">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Ropa</a></li>
+                        <li><a href="#">Zapatos</a></li>
+                        <li><a href="#">Telefonos</a></li>
+                        <li><a href="#">Pantallas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
